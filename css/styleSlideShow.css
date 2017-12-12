@@ -5,6 +5,7 @@
   max-width: 550px;
   position: relative;
   margin: auto;
+  margin-top: 20; 
 }
 
 /* Hide the images by default */

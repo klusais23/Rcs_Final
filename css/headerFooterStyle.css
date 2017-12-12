@@ -1,11 +1,23 @@
 
 .footer{
+    margin-top: 10;
     position: fixed; 
-    left: 0; bottom: 0; 
+    left: 0; 
+    bottom: 0;
     width: 100%; 
+    height:40px;
     background-color: rgb(223, 221, 221); 
-    color: rgb(10, 6, 6);
+    
+   
+    
+}
+.footer p{
+    font-size: 0.8em; 
+    display: block;
+    color: rgb(3, 3, 3);
     text-align: left;
+    padding: 11px 16px;
+    text-decoration: none;
 }
 
 .headerr{
@@ -18,9 +30,110 @@
 }
 .textInArticle{
     line-height: 0.8; 
-    font-size: 1em; 
+    font-size: 0.6em; 
     background-color: rgb(255, 255, 255)
 }
 .navPlace{
     text-align: right;
+}
+.col-8{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.headerul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(222, 223, 222);
+}
+
+li {
+    float: right;
+}
+.icone{
+    float:left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin-left:20;
+}
+
+.linki  {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 11px 16px;
+    text-decoration: none;
+    
+}
+
+li a:hover {
+    background-color: #777;
+}
+.activee{
+    background-color: rgb(61, 23, 23);
+    
+}
+
+.atikulinoLabas{
+    text-align: center;
+}
+
+.ramis{
+    /* margin: auto;
+    height: 100%; */
+
+}
+.lielaBilde{
+    margin: 10;
+    background: rgb(203, 206, 203)
+    
+}
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
 }
