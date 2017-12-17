@@ -1,58 +1,39 @@
-function myFunction() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
+var slideIndex=1;
+
+var modal = document.getElementById('myModal');
+
+var modalImg = document.getElementById("img01");
+
+var imagList = document.getElementsByClassName('image')
+
+ function popup(nr) {
+    var num= parseInt(nr);
+    slideIndex=num;
+    ShowSlide(slideIndex);
 }
 
 
-var $overLay =$("<div id='overLay'></div>");
 
-$("body").append($overLay);
-
-var $image =$("<img id = 'bilde'>");
-
-$overLay.append($image);
-
-var $close = $("<img id = 'closeImage'>");
-
-$overLay.append($close);
-
-var $next = $("<img id = 'nextImage'>");
-$overLay.append($next);
-
-var $previous = $("<img id = 'prewiousImg'>");
-$overLay.append($previous);
-
-$("#imageGalery a").click(function(event){
-    event.preventDefault();
-
-    var imageSource =$(this).attr("href");
-    $image.attr("src", imageSource);
-    $close.attr("src", "images/close-file.png" );
-    $next.attr("src", "images/nextImage.jpg" );
-    $previous.attr("src", "images/previousPic.jpg" );
-
-    $overLay.show();
-});
+var span = document.getElementsByClassName("close")[0];
 
 
-$("#nextImage").click(function(){
-   
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
+span.onclick = function() { 
+    modal.style.display = "none";
+}
 
-});
 
-$close.click(function(){
-    $($overLay).hide();
-})
+function plusSlides(n) {
+    var num= parseInt(n);   
+    ShowSlide(slideIndex +=num );
+
+}
+
+function ShowSlide(n){
+    
+    if (n > imagList.length) {slideIndex = 1} 
+      if (n < 1) {slideIndex = imagList.length}
+         
+
+    modal.style.display = "block";
+    modalImg.src = imagList[slideIndex-1].src ;
+}
